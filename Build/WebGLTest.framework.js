@@ -4493,20 +4493,22 @@ var ASM_CONSTS = {
   function _RequestUserData() {
       window.alert("REQUEST USER DATA");
       
+      if(window.Telegram){
+        window.alert("telegram instance: " + window.Telegram);
+          if(window.Telegram.WebApp){
+            window.alert("telegram Web App instance: " + window.Telegram.WebApp);
+            if(window.Telegram.WebApp.initDataUnsafe){
+              window.alert("telegram DATA: " + window.Telegram.WebApp.initDataUnsafe);
+                if(window.Telegram.WebApp.initDataUnsafe.user){
+                  window.alert("USER DATA: " + window.Telegram.WebApp.initDataUnsafe.user);
+                }
+            }
+          }
+      }
+      
       if (window.unityInstance) {
         window.alert("unity instance: " + window.unityInstance);
-        if(window.Telegram){
-          window.alert("telegram instance: " + window.Telegram);
-            if(window.Telegram.WebApp){
-              window.alert("telegram Web App instance: " + window.Telegram.WebApp);
-              if(window.Telegram.WebApp.initDataUnsafe){
-                window.alert("telegram DATA: " + window.Telegram.WebApp.initDataUnsafe);
-                  if(window.Telegram.WebApp.initDataUnsafe.user){
-                    window.alert("USER DATA: " + window.Telegram.WebApp.initDataUnsafe.user);
-                  }
-              }
-            }
-        }
+        
         window.unityInstance.SendMessage("TelegramListener", "OnUserDataReceive", JSON.stringify(window.Telegram.WebApp.initDataUnsafe.user));
       }
     }
