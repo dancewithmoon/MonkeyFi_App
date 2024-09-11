@@ -4491,18 +4491,18 @@ var ASM_CONSTS = {
     }
 
   function _RequestUserData() {
-      console.log("REQUEST USER DATA");
+      window.alert("REQUEST USER DATA");
       
       if (window.unityInstance) {
-        console.log("unity instance: " + window.unityInstance);
+        window.alert("unity instance: " + window.unityInstance);
         if(window.Telegram){
-          console.log("telegram instance: " + window.Telegram);
+          window.alert("telegram instance: " + window.Telegram);
             if(window.Telegram.WebApp){
-              console.log("telegram Web App instance: " + window.Telegram.WebApp);
+              window.alert("telegram Web App instance: " + window.Telegram.WebApp);
               if(window.Telegram.WebApp.initDataUnsafe){
-                console.log("telegram DATA: " + window.Telegram.WebApp.initDataUnsafe);
+                window.alert("telegram DATA: " + window.Telegram.WebApp.initDataUnsafe);
                   if(window.Telegram.WebApp.initDataUnsafe.user){
-                    console.log("USER DATA: " + window.Telegram.WebApp.initDataUnsafe.user);
+                    window.alert("USER DATA: " + window.Telegram.WebApp.initDataUnsafe.user);
                   }
               }
             }
