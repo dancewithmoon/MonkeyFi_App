@@ -1993,13 +1993,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  3634688: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 3634749: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 3634813: function() {return Module.webglContextAttributes.powerPreference;},  
- 3634871: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 3634926: function($0) {performance.now = function() { return $0; };},  
- 3634974: function($0) {performance.now = function() { return $0; };},  
- 3635022: function() {performance.now = Module['emscripten_get_now_backup'];}
+  3636096: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 3636157: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 3636221: function() {return Module.webglContextAttributes.powerPreference;},  
+ 3636279: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 3636334: function($0) {performance.now = function() { return $0; };},  
+ 3636382: function($0) {performance.now = function() { return $0; };},  
+ 3636430: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -2179,10 +2179,6 @@ var ASM_CONSTS = {
       if (window && window.Telegram && window.Telegram.WebApp) {
         window.Telegram.WebApp.HapticFeedback.notificationOccurred(UTF8ToString(level));
       }
-    }
-
-  function _Hello() {
-      window.alert("Hello, world!");
     }
 
   function _HideBackButton() {
@@ -4490,24 +4486,9 @@ var ASM_CONSTS = {
       }
     }
 
-  function _RequestUserData() {
-      window.alert("REQUEST USER DATA");
-      
-      window.alert("telegram instance: " + window.Telegram);
-        if(window.Telegram){
-          window.alert("telegram Web App instance: " + window.Telegram.WebApp);
-          if(window.Telegram.WebApp){
-            window.alert("telegram DATA: " + window.Telegram.WebApp.initDataUnsafe);
-              if(window.Telegram.WebApp.initDataUnsafe){
-                window.alert("USER DATA: " + window.Telegram.WebApp.initDataUnsafe.user);
-              }
-          }
-        }
-      
-      if (window.unityInstance) {
-        window.alert("unity instance: " + window.unityInstance);
-        
-        window.unityInstance.SendMessage("TelegramListener", "OnUserDataReceive", JSON.stringify(window.Telegram.WebApp.initDataUnsafe.user));
+  function _RequestUserData() {   
+      if (window.unityInstance) {      
+        window.unityInstance.SendMessage("TelegramBridge", "ReceiveUserData", JSON.stringify(window.Telegram.WebApp.initDataUnsafe.user));
       }
     }
 
@@ -15048,7 +15029,6 @@ var asmLibraryArg = {
   "Expand": _Expand,
   "GetJSMemoryInfo": _GetJSMemoryInfo,
   "HapticFeedback": _HapticFeedback,
-  "Hello": _Hello,
   "HideBackButton": _HideBackButton,
   "HideMainButton": _HideMainButton,
   "JS_Accelerometer_IsRunning": _JS_Accelerometer_IsRunning,
