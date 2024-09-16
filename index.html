@@ -44,6 +44,11 @@
         console.log('Instance created',window.Telegram.WebApp);
                 window.unityInstance = unityInstance;
             });
+            
+        window.onbeforeunload = function(e) {
+            console.log("Calling QuitHandler from Browser!");
+            window.unityInstance.SendMessage("QuitHandler", "OnApplicationQuit");
+        };        
     </script>
 
     <script>
@@ -57,16 +62,7 @@
         })
     }
     </script>
-    
-    <script>
-    window.onbeforeunload = function(e) {
-        console.log("Calling QuitHandler from Browser!");
-        gameInstance.SendMessage("QuitHandler", "OnApplicationQuit");
-        var dialogText = "You game has been saved!  Would you like to continue unloading the page?";
-        e.returnValue = dialogText;
-        return dialogText;
-    };
-    </script>
+
 </body>
 
 </html>
