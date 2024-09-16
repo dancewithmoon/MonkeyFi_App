@@ -57,6 +57,8 @@
     <script>
     if(window.Telegram.WebApp){
         window.Telegram.WebApp.expand();
+        window.Telegram.WebApp.enableClosingConfirmation();
+        window.Telegrtam.WebApp.close = () => {window.Telegram.WebApp.showAlert("CLOSE?")}
         window.Telegram.WebApp.onEvent('qrTextReceived',async (obj)=>{
             console.log('#qrTextReceived',obj)
             if( window.unityInstance){
