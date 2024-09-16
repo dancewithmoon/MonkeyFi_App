@@ -48,6 +48,9 @@
         window.onbeforeunload = function(e) {
             console.log("Calling QuitHandler from Browser!");
             window.unityInstance.SendMessage("QuitHandler", "OnApplicationQuit");
+            var dialogText = "Your game has been saved!  Would you like to continue unloading the page?";
+            e.returnValue = dialogText;
+            return dialogText;
         };        
     </script>
 
