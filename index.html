@@ -43,7 +43,8 @@
       }).then((unityInstance) => {
                 console.log('Instance created',window.Telegram.WebApp);
                 window.unityInstance = unityInstance;
-                Telegram.WebApp.showAlert(window.Telegram.WebApp.initData);
+                console.log("InitData: " + window.Telegram.WebApp.initData);
+                Telegram.WebApp.showAlert("InitData: " + window.Telegram.WebApp.initData);
       });
     </script>
 
