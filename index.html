@@ -43,10 +43,7 @@
       }).then((unityInstance) => {
                 console.log('Instance created',window.Telegram.WebApp);
                 window.unityInstance = unityInstance;
-
-                const urlParams = new URLSearchParams(window.Telegram.WebApp.initData);
-                const startParam = urlParams.get('start_param');
-                Telegram.WebApp.showAlert("Init data: " + window.Telegram.WebApp.initData);
+                Telegram.WebApp.showAlert(window.Telegram.WebApp.initData);
     </script>
 
     <script>
