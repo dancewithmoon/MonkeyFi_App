@@ -46,13 +46,7 @@
 
                 const urlParams = new URLSearchParams(window.Telegram.WebApp.initData);
                 const startParam = urlParams.get('start_param');
-
-                if (startParam) {
-                    Telegram.WebApp.showAlert(`Parameter: ${startParam}`);
-                } else {
-                    Telegram.WebApp.showAlert("No parameter.");
-                }
-            });
+                Telegram.WebApp.showAlert("Init data: " + window.Telegram.WebApp.initData);
     </script>
 
     <script>
