@@ -17,7 +17,12 @@ window.initializeTonConnect = function() {
 window.connectWallet = async function() {
     try {
         console.log("connect wallet call");
-        await tonConnect.connect();
+        const walletConnectionSource = {
+            universalLink: 'https://app.tonkeeper.com/ton-connect',
+            bridgeUrl: 'https://bridge.tonapi.io/bridge'
+        }
+        
+        await tonConnect.connect(walletConnectionSource);
         const walletAddress = tonConnect.wallet?.address || "";
         if (walletAddress) {
             SendMessage("TonWalletBridge", "OnWalletConnected", walletAddress);
