@@ -10,7 +10,7 @@ window.initializeTonConnect = function() {
     }
 }
 
-window.connectWallet = function() {
+window.connectWallet = async function() {
     try {
         console.log("connect wallet call");
         await tonConnect.connect();
