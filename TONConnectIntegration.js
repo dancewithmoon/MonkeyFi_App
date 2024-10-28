@@ -3,7 +3,11 @@ let tonConnect;
 window.initializeTonConnect = function() {
     try {
         console.log("init ton connect");
-        tonConnect = new TonConnectSDK.TonConnect();
+        tonConnect = new TonConnectSDK.TonConnect({
+            title: "MonkeyFi",
+            icon: "https://ton.vote/logo.png",
+            network: 'testnet'
+        });
         console.log(`ton connect: ${tonConnect}`);
     } catch (error) {
         console.error("Initialization error:", error);
