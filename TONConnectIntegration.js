@@ -2,7 +2,7 @@ let tonConnect;
 
 window.initializeTonConnect = function() {
     try {
-        console.log("init ton connect")
+        console.log("init ton connect");
         tonConnect = new TonConnectSDK.TonConnect();
         console.log(`ton connect: ${tonConnect}`);
     } catch (error) {
@@ -12,7 +12,7 @@ window.initializeTonConnect = function() {
 
 window.connectWallet = function() {
     try {
-        console.log("connect wallet call")
+        console.log("connect wallet call");
         await tonConnect.connect();
         const walletAddress = tonConnect.wallet?.address || "";
         if (walletAddress) {
