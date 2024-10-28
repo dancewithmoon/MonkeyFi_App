@@ -13,11 +13,11 @@ window.initializeTonConnect = function() {
 window.connectWallet = function() {
     try {
         console.log("connect wallet call")
-/*        await tonConnect.connectWallet();
+        await tonConnect.connect();
         const walletAddress = tonConnect.wallet?.address || "";
         if (walletAddress) {
             SendMessage("TonWalletBridge", "OnWalletConnected", walletAddress);
-        }*/
+        }
     } catch (error) {
         console.error("Initialization error:", error);
     }
