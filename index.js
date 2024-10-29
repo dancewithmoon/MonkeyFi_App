@@ -38,9 +38,9 @@ window.addEventListener("load", function () {
   var buildUrl = "Build";
   var loaderUrl = buildUrl + "/TonTest.loader.js";
   var config = {
-    dataUrl: buildUrl + "/TonTest.data.gz",
-    frameworkUrl: buildUrl + "/TonTest.framework.js.gz",
-    codeUrl: buildUrl + "/TonTest.wasm.gz",
+    dataUrl: buildUrl + "/TonTest.data",
+    frameworkUrl: buildUrl + "/TonTest.framework.js",
+    codeUrl: buildUrl + "/TonTest.wasm",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "TonConnectTest",

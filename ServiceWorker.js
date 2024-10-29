@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-TonConnectTest-0.1";
 const contentToCache = [
     "Build/TonTest.loader.js",
-    "Build/TonTest.framework.js.gz",
-    "Build/TonTest.data.gz",
-    "Build/TonTest.wasm.gz",
+    "Build/TonTest.framework.js",
+    "Build/TonTest.data",
+    "Build/TonTest.wasm",
     "TemplateData/style.css"
 
 ];
