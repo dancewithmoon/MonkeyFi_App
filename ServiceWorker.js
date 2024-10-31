@@ -1,9 +1,9 @@
-const cacheName = "DefaultCompany-WebGL_Test-1.0";
+const cacheName = "DefaultCompany-TonConnectTest-0.1";
 const contentToCache = [
-    "Build/WebGLTest.loader.js",
-    "Build/WebGLTest.framework.js",
-    "Build/WebGLTest.data",
-    "Build/WebGLTest.wasm",
+    "Build/TonTest.loader.js",
+    "Build/TonTest.framework.js",
+    "Build/TonTest.data",
+    "Build/TonTest.wasm",
     "TemplateData/style.css"
 
 ];
