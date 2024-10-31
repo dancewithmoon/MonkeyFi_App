@@ -1,6 +1,6 @@
 {
-    "name": "TonConnectTest",
-    "short_name": "TonConnectTest",
+    "name": "WebGL_Test",
+    "short_name": "WebGL_Test",
     "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#231F20",

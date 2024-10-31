@@ -36,15 +36,15 @@ window.addEventListener("load", function () {
   }
 
   var buildUrl = "Build";
-  var loaderUrl = buildUrl + "/TonTest.loader.js";
+  var loaderUrl = buildUrl + "/WebGLTest.loader.js";
   var config = {
-    dataUrl: buildUrl + "/TonTest.data",
-    frameworkUrl: buildUrl + "/TonTest.framework.js",
-    codeUrl: buildUrl + "/TonTest.wasm",
+    dataUrl: buildUrl + "/WebGLTest.data",
+    frameworkUrl: buildUrl + "/WebGLTest.framework.js",
+    codeUrl: buildUrl + "/WebGLTest.wasm",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
-    productName: "TonConnectTest",
-    productVersion: "0.1",
+    productName: "WebGL_Test",
+    productVersion: "1.0",
     showBanner: unityShowBanner,
   };
 
