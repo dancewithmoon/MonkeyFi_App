@@ -43,8 +43,8 @@ window.addEventListener("load", function () {
     codeUrl: buildUrl + "/WebGLTest.wasm",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
-    productName: "TonConnectTest",
-    productVersion: "0.1",
+    productName: "WebGL_Test",
+    productVersion: "1.0",
     showBanner: unityShowBanner,
   };
 
@@ -72,9 +72,15 @@ window.addEventListener("load", function () {
       progressBarFull.style.width = 100 * progress + "%";
     }).then((unityInstance) => {
       unityInstanceRef = unityInstance;
+      window.unityInstance = unityInstance;
       loadingBar.style.display = "none";
     }).catch((message) => {
       alert(message);
     });
+    
+    if(window.Telegram.WebApp){
+      window.Telegram.WebApp.expand();
+      window.Telegram.WebApp.enableClosingConfirmation();
+    }
   };
   document.body.appendChild(script);
